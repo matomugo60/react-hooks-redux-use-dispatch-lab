@@ -1,18 +1,18 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 function Restaurants() {
-  const restaurants = useSelector((state) => state.restaurants);
+  const restaurants = useSelector((state) => state.restaurants)
 
   return (
     <div>
       <ul>
-        {restaurants.map((restaurant) => (
-          <li key={restaurant.name}>{restaurant.name}</li>
+        {restaurants.map((restaurant, index) => (
+          <li key={index}>{restaurant.name}</li>
         ))}
       </ul>
     </div>
-  );
+  )
 }
 
-export default Restaurants;
+export default Restaurants
